@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class CarroService {
@@ -23,5 +24,16 @@ public class CarroService {
     }
     public Carro salvarCarro (Carro carro){
         return carroRepository.save(carro);
+    }
+    public void deletarCarro (UUID id){
+        carroRepository.deleteById(id);
+    }
+    public Carro atualizarCarro(UUID id, Carro carroNovo) {
+        Carro carroExistente = carroRepository.getReferenceById(id);
+        carroExistente.setModelo(carroNovo.getModelo());
+        carroExistente.setPlaca(carroNovo.getPlaca());
+        carroExistente.setCor(carroNovo.getCor());
+        carroExistente.setStatus(carroNovo.getStatus());
+        return carroRepository.save(carroExistente);
     }
 }
