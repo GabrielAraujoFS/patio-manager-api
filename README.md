@@ -156,6 +156,32 @@ Content-Type: application/json
 }
 ```
 
+## 🚧 Desafios do Projeto
+
+Durante o desenvolvimento foram trabalhados conceitos importantes como:
+
+* Estruturação de APIs REST
+* Integração com PostgreSQL
+* Utilização do Spring Data JPA
+* Organização em arquitetura em camadas
+* Containerização utilizando Docker
+* Persistência e manipulação de dados
+
+---
+
+## 📚 Aprendizados
+
+Este projeto contribuiu para o desenvolvimento de conhecimentos em:
+
+* Java
+* Spring Boot
+* Spring Data JPA
+* PostgreSQL
+* Docker
+* Arquitetura em camadas
+* APIs REST
+* Boas práticas de desenvolvimento backend
+
 ---
 
 ## 🗺️ Roadmap
