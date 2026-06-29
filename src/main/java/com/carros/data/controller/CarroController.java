@@ -3,6 +3,7 @@ package com.carros.data.controller;
 
 import com.carros.data.model.Carro;
 import com.carros.data.service.CarroService;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,7 +23,7 @@ public class CarroController {
         return carroService.ListarTodos();
     }
     @PostMapping
-    public Carro criarCarro(@RequestBody Carro novoCarro){
+    public Carro criarCarro(@Valid @RequestBody Carro novoCarro){
         return carroService.salvarCarro(novoCarro);
     }
     @DeleteMapping("/{id}")
